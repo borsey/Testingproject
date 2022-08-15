@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [insuranceSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="ExtendReport.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test thread-count="2" parallel="classes" name="operabrowser(failed)">
+    <parameter name="browsername" value="opera"/>
+    <classes>
+      <class name="Test.VerifyCarInsurance">
+        <methods>
+          <include name="verifyreriveQotation"/>
+          <include name="createObject"/>
+          <include name="launchbrowser"/>
+          <include name="logintheapplicatin"/>
+          <include name="logoutapplication"/>
+          <include name="clearobject"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- Test.VerifyCarInsurance -->
+    </classes>
+  </test> <!-- operabrowser(failed) -->
+  <test thread-count="2" parallel="classes" name="Edgebrowser(failed)">
+    <parameter name="browsername" value="Edge"/>
+    <classes>
+      <class name="Test.Verifyregistrationpage">
+        <methods>
+          <include name="launchbrowser"/>
+          <include name="launchbrowser"/>
+          <include name="closebrowser"/>
+          <include name="createregistrationpage"/>
+          <include name="verifregistrationpage"/>
+          <include name="clearobject"/>
+          <include name="enterinregistrationpage"/>
+        </methods>
+      </class> <!-- Test.Verifyregistrationpage -->
+      <class name="Test.VerifyCarInsurance">
+        <methods>
+          <include name="verifyreriveQotation"/>
+          <include name="createObject"/>
+          <include name="launchbrowser"/>
+          <include name="verifyrequestQotation"/>
+          <include name="logintheapplicatin"/>
+          <include name="logoutapplication"/>
+          <include name="clearobject"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- Test.VerifyCarInsurance -->
+    </classes>
+  </test> <!-- Edgebrowser(failed) -->
+</suite> <!-- Failed suite [insuranceSuite] -->
