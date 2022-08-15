@@ -16,7 +16,8 @@ public class Headers {
 	@FindBy (xpath= "(//a[@class='ui-tabs-anchor'])[3]")
 	private WebElement retrivequotation;
 	
-
+	@FindBy (xpath="//input[@value='Log out']")
+	private WebElement logout;
 	
   
 	private Actions act ;
